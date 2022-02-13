@@ -37,6 +37,7 @@
   </head>
   <body>
     
+    <script src="./js/username.js"></script>
 
     <main class="header">
     
@@ -60,8 +61,14 @@
   <div class="col-md-1 themed-grid-col">.</div>
   <div class="col-md-7 themed-grid-col">
     <h1>
-      Your Profile
+      Your Profile: Welcome <span id="profile_username"></span>
+      <br/>
+      <a href="./signin.html">Not you?</a>
     </h1>
+    <script>
+      let name = localStorage.getItem("username");
+      document.getElementById("profile_username").innerHTML = name;
+    </script>
   </div>
 
   <div class=" col-md-4 themed-grid-col d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;">
@@ -160,10 +167,7 @@
 
   <div class="b-example-divider"></div>
 </main>
-
-
     <script src="./js/bootstrap.bundle.min.js"></script>
-
     <script src="./js/sidebars.js"></script>
   </body>
 </html>
