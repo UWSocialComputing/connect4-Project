@@ -1,8 +1,5 @@
 'use strict'
 
-const user = document.getElementById('floatingInput');
-const login = document.getElementById('login');
-
 let username;
 if (document.getElementById('floatingInput') !== null) {
     document.getElementById('floatingInput').addEventListener('change', function() {
