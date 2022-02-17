@@ -25,6 +25,10 @@ main {
   background-color: teal;
 }
 
+.nav-pills .nav-link.active .nav-type {
+  background-color: black;
+}
+
 .nav-link {
   color: teal
 }
