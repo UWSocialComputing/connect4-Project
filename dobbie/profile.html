@@ -133,12 +133,31 @@
       <span class="fs-5 fw-semibold">Your Selected Dobbies</span>
     </a>
     <div class="list-group list-group-flush border-bottom scrollarea">
-      <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true" style="background-color: rgb(248, 141, 177)">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <strong class="mb-1">List group item heading</strong>
-          <small>Wed</small>
+      <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+        <div className="d-flex w-100 align-items-center justify-content-between">
+          <div id="firstName" className="mb-1"> </div>
         </div>
-        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+        <script>
+          fetch('dobbies.json')
+                  .then(function (response) {
+                    return response.json();
+                  })
+                  .then(function (data) {
+                    appendData(data);
+                  })
+                  .catch(function (err) {
+                    console.log('error: ' + err);
+                  });
+          function appendData(data) {
+            var mainContainer = document.getElementById("firstName");
+            for (var i = 0; i < data.length; i++) {
+              var div = document.createElement("div");
+              div.innerHTML = "From: " + data[i].firstName + "<br>" + "Q: " + data[i].dobQues + "<br>" +"A: " + data[i].dobAns + "<br>";
+              mainContainer.appendChild(div);
+
+            }
+          }
+        </script>
       </a>
       <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
         <div class="d-flex w-100 align-items-center justify-content-between">
