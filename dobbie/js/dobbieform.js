@@ -48,9 +48,15 @@ if (document.getElementById('submitDobbie') !== null) {
     document.getElementById('submitDobbie').addEventListener('click', function() {
         if (prompt !== null && answer !== null) {
             if (localStorage.getItem("username")) {
-                let src = localStorage.getItem("username");
-                let newDobbie = new Dobbie(target, src, prompt, answer);
-                pushData(newDobbie);
+                if (target == null || target.length === 0) {
+                    alert('who are you sending this Dobbie to?');
+                } else if (answer == null || answer.length === 0) {
+                    alert('why is your answer blank?');
+                } else {
+                    let src = localStorage.getItem("username");
+                    let newDobbie = new Dobbie(target, src, prompt, answer);
+                    pushData(newDobbie);
+                }
             }
             
         }
