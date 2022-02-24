@@ -4,6 +4,23 @@ const postUrl = 'https://dobbiedata.azurewebsites.net/createDobbie';
 
 let prompt, answer, target;
 
+/*
+if (document.getElementsByClassName("carousel-item active") !== null) {
+    let section = document.getElementsByClassName("carousel-item active");
+    if (section.length > 0) {
+        let test = document.getElementsByClassName("carousel-item active")[0].childNodes[1].innerText;
+        document.getElementById('dobbieTarget').value = test;
+    }
+    document.getElementsByClassName("carousel-control-next")[0].addEventListener('click', function() {
+        let test = document.getElementsByClassName("carousel-item active")[0].childNodes[1].innerText;
+        document.getElementById('dobbieTarget').value = test;
+    });
+    document.getElementsByClassName("carousel-control-prev")[0].addEventListener('click', function() {
+        let test = document.getElementsByClassName("carousel-item active")[0].childNodes[1].innerText;
+        document.getElementById('dobbieTarget').value = test;
+    });
+    
+}*/
 
 if (document.getElementById('dobbieTarget') !== null) {
     target = document.getElementById('dobbieTarget').value;
