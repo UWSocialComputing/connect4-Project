@@ -75,9 +75,9 @@
         <div class="row justify-content-start">
           <div class="col-md-8">
             <div>
-              <h1>
+              <h2>
                 Your Friends
-              </h1>
+              </h2>
           </div>
           <div id="carouselExample" class="carousel carousel-dark slide" data-bs-interval="false"">
             <ol class="carousel-indicators">
@@ -85,6 +85,11 @@
                 <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
                 <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
             </ol>
+            <a class="carousel-control-prev justify-content-start" href="#carouselExample" role="button" data-bs-slide="prev">
+              <img src="./assets/icons/arrow-pointing-left1.png" class="carousel-control-prev-icon" aria-hidden="true">
+              <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+              <span class="visually-hidden">Previous</span>
+            </a>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <h3>Harry Styles</h3>
@@ -213,18 +218,16 @@
                   <div class="row mt-3">.</div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <a class="carousel-control-next justify-content-end" href="#carouselExample" role="button" data-bs-slide="next">
+                <img src="./assets/icons/arrow-pointing-right.png" class="carousel-control-prev-icon" aria-hidden="true">
+                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
                 <span class="visually-hidden">Next</span>
             </a>
+            
         </div>
         </div>
         
-        <!-- Start doobie form -->
+        <!-- Start dobbie form -->
         
           <div class="col-4">
             <div class="dobbie-form row justify-content-end -flex align-items-stretch flex-shrink-0 fs-4 themed-grid-col">
@@ -235,7 +238,8 @@
               <form>
                 <div class="form-group">
                   <label for="dobbiePrompt">Select a question to answer</label>
-                  <select class="form-control" id="dobbiePrompt">
+                  <select class="form-select" id="dobbiePrompt" aria-label="Default select example">
+                    <!-- <option>-- Select a question --</option> -->
                     <option>What is your favorite thing about them?</option>
                     <option>What are the pros and cons of dating this person?</option>
                     <option>What would their ideal date be?</option>
@@ -259,5 +263,33 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/sidebars.js"></script>
   </body>
+  <footer class="text-center text-white mt-4" style="background-color: teal;">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-floating m-1" href="#!" role="button">
+          <img src="./assets/icons/facebook.png" width="32" height="32"></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-floating m-1" href="#!" role="button">
+          <img src="./assets/icons/twitter.png" width="32" height="32"></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-floating m-1" href="#!" role="button">
+        <img src="./assets/icons/instagram.png" width="32" height="32"></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 </html>
 <script src="./js/dobbieform.js"></script>
