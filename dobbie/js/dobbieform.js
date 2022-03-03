@@ -56,6 +56,8 @@ if (document.getElementById('submitDobbie') !== null) {
                     let src = localStorage.getItem("username");
                     let newDobbie = new Dobbie(target, src, prompt, answer);
                     pushData(newDobbie);
+                    document.getElementById('dobbieAnswer').value = '';
+                    alert('submitted!');
                 }
             }
             
