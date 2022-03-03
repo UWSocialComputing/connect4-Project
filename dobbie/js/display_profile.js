@@ -10,7 +10,7 @@ function getData(username) {
         .catch(err => console.log(err));
 }
 
-let responseDataPromise = getData('dubs')
+let responseDataPromise = getData('you')
     .then(resp => {
         let dobbies = new Array();
         for (let i = 0; i < resp.length; i++) {
