@@ -11,6 +11,8 @@ Once cloned, open dobbie/signin.html to begin, opening in Chrome.
 
 ![instructions](./dobbie/assets/openscreenshot.png)
 
+The database code for the backend is kept in a separate (private) repository for security reasons.
+
 ## Authors and Acknowledgements
 This project was developed as part of the UW CSE 481P Social Computing Capstone course by Emily Chang, Simona Liao, Renee Wang, and Felicia Yan. 
 Special thanks to Professor Amy Zhang and Ruotong Wang for their support and guidance on this project!
