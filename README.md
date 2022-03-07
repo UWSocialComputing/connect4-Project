@@ -11,7 +11,7 @@ Once cloned, open dobbie/signin.html to begin, opening in Chrome.
 
 ![instructions](./dobbie/assets/openscreenshot.png)
 
-The database code for the backend is kept in a separate (private) repository for security reasons.
+The database code for the backend is kept in a separate (private) repository for security reasons. (For collaborators with access, the repo is dobbie-server.)
 
 ## Features
 - Log-In/Sign-Up Page
