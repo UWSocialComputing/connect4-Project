@@ -1,27 +1,14 @@
 'use strict'
 
+/**
+ * Form for creating a Dobbie, and pushes it to the database.
+ */
+
 const postUrl = 'https://dobbiedata.azurewebsites.net/createDobbie';
 
 let prompt, answer, target;
 
-/*
-if (document.getElementsByClassName("carousel-item active") !== null) {
-    let section = document.getElementsByClassName("carousel-item active");
-    if (section.length > 0) {
-        let test = document.getElementsByClassName("carousel-item active")[0].childNodes[1].innerText;
-        document.getElementById('dobbieTarget').value = test;
-    }
-    document.getElementsByClassName("carousel-control-next")[0].addEventListener('click', function() {
-        let test = document.getElementsByClassName("carousel-item active")[0].childNodes[1].innerText;
-        document.getElementById('dobbieTarget').value = test;
-    });
-    document.getElementsByClassName("carousel-control-prev")[0].addEventListener('click', function() {
-        let test = document.getElementsByClassName("carousel-item active")[0].childNodes[1].innerText;
-        document.getElementById('dobbieTarget').value = test;
-    });
-    
-}*/
-
+// dobbieTarget is the user being Dobbied
 if (document.getElementById('dobbieTarget') !== null) {
     target = document.getElementById('dobbieTarget').value;
     document.getElementById('dobbieTarget').addEventListener('change', function() {
@@ -29,6 +16,7 @@ if (document.getElementById('dobbieTarget') !== null) {
     });
 }
 
+// dobbiePrompt is the prompt that the Dobbie answers
 if (document.getElementById('dobbiePrompt') !== null) {
     prompt = document.getElementById('dobbiePrompt').value;
     document.getElementById('dobbiePrompt').addEventListener('change', function() {
@@ -65,7 +53,7 @@ if (document.getElementById('submitDobbie') !== null) {
     });
 }
 
-
+// pushes dobbie to the DB
 function pushData(dobbie) {
     let insertDobbie = JSON.stringify(dobbie);
     console.log(insertDobbie);
@@ -82,6 +70,9 @@ function pushData(dobbie) {
     .catch(err => console.log(err));
 }
 
+// Dobbie object
+// the username is the user being Dobbied
+// src is the user sending the Dobbie
 class Dobbie {
     constructor(username, src, prompt, answer) {
         this.username = username;
