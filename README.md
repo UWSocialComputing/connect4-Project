@@ -12,6 +12,8 @@ Once cloned, open dobbie/signin.html to begin, opening in Chrome.
 ![instructions](./dobbie/assets/openscreenshot.png)
 
 The database code for the backend is kept in a separate (private) repository for security reasons. (For collaborators with access, the repo is dobbie-server.)
+The deployed web app can be found at [https://dobbiedata.azurewebsites.net/](https://dobbiedata.azurewebsites.net).
+The GET requests can be viewed in a browser: https://dobbiedata.azurewebsites.net/getDobbies?username=[enter username here]. For example, [https://dobbiedata.azurewebsites.net/getDobbies?username=dobby](https://dobbiedata.azurewebsites.net/getDobbies?username=dobby) or [https://dobbiedata.azurewebsites.net/getDobbies?username=dubs](https://dobbiedata.azurewebsites.net/getDobbies?username=dubs).
 
 ## Features
 - Log-In/Sign-Up Page
